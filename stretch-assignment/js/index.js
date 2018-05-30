@@ -133,6 +133,8 @@ let contact = document.querySelector('.contact');
 let footer = document.querySelector('footer');
 footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
 
+//**************EVENT LISTENERS****************************************
+
     // function for testing event listeners
     function popUp() {
       alert("you pushed the button");
@@ -140,5 +142,18 @@ footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
     ctaTextButton.addEventListener('click', () => {
       alert("You clicked the button! Good job!")
     });
+
+
+  ctaImage.addEventListener('mouseover', (event) => {
+    //TweenLite.to(ctaImage, 2, {width:"50%", height:"50%"});
+    event.target.classList.add("enlarge");
+  });
+
+
+//Nav Header - Logo to Rotate
+  logo.addEventListener("dblclick", () => {
+    logo.classList.toggle("rotate");
+  });
+
 
 
